@@ -1,5 +1,6 @@
 #Very simple iptables script because syntax...
 #run this as root, it will wipe your rules. be sure to save them afterwards
+#the insert assumes that you have run this script b4
 #!/bin/bash
 read -p 'Type 1 to Start Fresh :: 2 to Insert ' choice
 if [ $choice -eq 1 ]
@@ -22,6 +23,6 @@ while true;
 do
 	read -p 'tcp/udp: ' type
 	read -p 'Port: ' port
-	iptables -I INPUT 2 -p $type --dport $port -j ACCEPT
+	iptables -I INPUT 3 -p $type --dport $port -j ACCEPT
 done
 fi 
