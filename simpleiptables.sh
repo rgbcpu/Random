@@ -1,5 +1,7 @@
+#Very simple iptables script because syntax...
+#run this as root, it will wipe your rules. be sure to save them afterwards
+
 #!/bin/bash
-STATUS=1
 iptables -F
 iptables -A INPUT -i lo -j ACCEPT
 iptables -A INPUT -m state --state ESTABLISHED,RELATED -j ACCEPT
