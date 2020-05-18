@@ -1,2 +1,0 @@
-'''highlytechnical'''
-print("hello world!")
